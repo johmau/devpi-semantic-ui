@@ -3,13 +3,14 @@
     <head>
         <title>${title|'devpi'}</title>
         <metal:head use-macro="request.macros['head']" />
+        <link rel="icon" type="image/x-icon" href="${request.theme_static_url('images/favicon.png')}">
     </head>
     <body>
         <header class="ui fixed borderless menu">
             <div class="ui container">
-                <a href="${request.route_url('root')}" class="header item">
+                <a href="${request.route_url('root')}" class="header item" id="header_logo_container">
                     <img class="logo" src="${request.theme_static_url('images/devpi.png')}" />
-                    Devpi
+                    PyPI
                 </a>
                 <form method="get" id="search" action="${request.route_url('search')}" class="ui fluid category search item">
                     <div class="ui transparent icon input">
@@ -51,7 +52,7 @@
                     </div>
                     <div class="five wide column">
                         <h4 class="ui inverted header">Versions</h4>
-                        <div class="ui inverted link list"
+                        <div class="ui inverted link list" id="version_list"
                             tal:define="version_infos request.registry.get('devpi_version_info')"
                             tal:condition="version_infos">
                             <a tal:repeat="vi version_infos" class="item">${vi[0]}-${vi[1]}</a>
