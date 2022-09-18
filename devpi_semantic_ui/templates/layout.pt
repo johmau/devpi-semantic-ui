@@ -8,7 +8,7 @@
         <header class="ui fixed borderless menu">
             <div class="ui container">
                 <a href="${request.route_url('root')}" class="header item">
-                    <img class="logo" src="${request.theme_static_url('images/python.svg')}" />
+                    <img class="logo" src="${request.theme_static_url('images/devpi.png')}" />
                     Devpi
                 </a>
                 <form method="get" id="search" action="${request.route_url('search')}" class="ui fluid category search item">

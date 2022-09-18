@@ -12,6 +12,10 @@ body {
     width: 100%;
 }
 
+header {
+    background: linear-gradient(#feca38, #ffe771);
+}
+
 .ui.category.search > .results .category > .name {
     width: 180px;
     padding: .8em 1em;
